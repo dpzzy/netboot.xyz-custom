@@ -18,8 +18,8 @@ goto custom_exit
 
 :option_one
 kernel http://pxeboot:8080/centos7/7_4/isolinux/vmlinuz
-initrd=http://pxeboot:8080/centos7/7_4/isolinux/initrd.img
-imgargs vmlinuz inst.ks=http://pxeboot:8080/kickstarter/ks-centos74-ws.cfg
+initrd http://pxeboot:8080/centos7/7_4/isolinux/initrd.img inst.ks=http://pxeboot:8080/kickstarter/ks-centos74-ws.cfg
+imgargs vmlinuz
 boot || goto custom_exit
 
 :option_two
