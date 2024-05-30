@@ -17,8 +17,8 @@ goto ${custom_choice}
 goto custom_exit
 
 :option_one
-kernel centos7/7_4/vmlinuz
-append initrd=centos7/7_4/initrd.img inst.ks=ftp://192.168.8.23/pub/ks-centos74-ws.cfg
+kernel http://pxeboot/pub/centos7/7_4/isolinux/vmlinuz
+append initrd=http://pxeboot/pub/centos7/7_4/isolinux/initrd.img inst.ks=ftp://192.168.8.23/pub/ks-centos74-ws.cfg
 imgargs vmlinuz put_kernel_img_args_here
 boot || goto custom_exit
 
