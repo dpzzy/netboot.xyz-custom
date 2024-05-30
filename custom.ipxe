@@ -4,7 +4,7 @@
 ###
 
 :custom
-clear
+clear custom_choice
 menu ***** JAMM Visual PXE BOOT Menu *****
 item --gap -- -------- Workstation Images --------
 item option_one ${space} Centos 7.4
