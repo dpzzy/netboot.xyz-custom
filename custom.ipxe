@@ -17,8 +17,8 @@ goto ${custom_choice}
 goto custom_exit
 
 :option_one
-kernel http://pxeboot:8080/centos7/7_4/isolinux/vmlinuz
-initrd http://pxeboot:8080/centos7/7_4/isolinux/initrd.img
+kernel http://pxeboot:8080/centos7/7_4/images/pxeboot/vmlinuz
+initrd http://pxeboot:8080/centos7/7_4/images/pxeboot/initrd.img
 boot || goto custom_exit
 
 :option_two
