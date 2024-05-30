@@ -5,12 +5,11 @@
 
 :custom
 clear custom_choice
-menu This is a Test Menu
-item --gap This is the first sub menu
-item option_one ${space} Loading a kernel and initrd
-item option_two ${space} Loading an ISO
-item --gap This is a second sub menu
-item option_three ${space} Loads another custom sub menu
+menu ***** JAMM Visual PXE BOOT Menu *****
+item --gap Workstation Images
+item option_one ${space} Centos 7.4
+item option_two ${space} Rocky 8.7
+item --gap Flame Images
 item option_four ${space} This is option four
 choose custom_choice || goto custom_exit
 echo ${cls}
@@ -18,8 +17,8 @@ goto ${custom_choice}
 goto custom_exit
 
 :option_one
-kernel http://path.to/vmlinuz
-initrd http://path.to/initrd
+kernel centos7/7_4/vmlinuz
+append initrd=centos7/7_4/initrd.img inst.ks=ftp://192.168.8.23/pub/ks-centos74-ws.cfg
 imgargs vmlinuz put_kernel_img_args_here
 boot || goto custom_exit
 
