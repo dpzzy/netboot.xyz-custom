@@ -21,8 +21,8 @@ imgargs vmlinuz initrd=initrd.img inst.ks=http://pxeboot:8080/kickstarter/ks-cen
 boot || goto custom_exit
 
 :option_two
-kernel https://boot.netboot.xyz/memdisk raw iso
-initrd http://path.to/iso
+kernel http://pxeboot:8080/rocky8/8.7/images/pxeboot/vmlinuz
+initrd http://pxeboot:8080/rocky8/8.7/images/pxeboot/initrd.img
 boot || goto custom_exit
 
 :option_three
