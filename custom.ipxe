@@ -1,6 +1,6 @@
 #!ipxe
 ###
-### netboot.xyz-custom menu example
+### JAMM Vis PXE Custom environment
 ###
 
 :custom
