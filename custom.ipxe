@@ -10,8 +10,11 @@ item --gap -- -------- Workstation Images --------
 item option_one ${space} Centos 7.4
 item option_two ${space} Rocky 8.7
 item option_three ${space} Rocky 9.3
+item option_four ${space} Centos 7.4-nvme
+item option_five ${space} Rocky 8.7-nvme
+item option_six ${space} Rocky 9.3-nvme
 item --gap -- -------- Flame Images --------
-item option_four ${space} Centos 7.6
+item option_seven ${space} Centos 7.6
 choose custom_choice || goto custom_exit
 goto ${custom_choice}
 
@@ -24,7 +27,7 @@ boot || goto custom_exit
 :option_two
 kernel http://pxeboot:8080/rocky8/8.7/images/pxeboot/vmlinuz
 initrd http://pxeboot:8080/rocky8/8.7/images/pxeboot/initrd.img
-imgargs vmlinuz initrd=initrd.img inst.ks=http://pxeboot:8080/kickstarter/ks-rocky85-ws.cfg ip=dhcp
+imgargs vmlinuz initrd=initrd.img ip=dhcp
 boot || goto custom_exit
 
 :option_three
@@ -34,9 +37,29 @@ imgargs vmlinuz initrd=initrd.img ip=dhcp
 boot || goto custom_exit
 
 :option_four
+kernel http://pxeboot:8080/rocky9/9.3/images/pxeboot/vmlinuz
+initrd http://pxeboot:8080/rocky9/9.3/images/pxeboot/initrd.img
+imgargs vmlinuz initrd=initrd.img ip=dhcp
+boot || goto custom_exit
+
+:option_five
+kernel http://pxeboot:8080/rocky9/9.3/images/pxeboot/vmlinuz
+initrd http://pxeboot:8080/rocky9/9.3/images/pxeboot/initrd.img
+imgargs vmlinuz initrd=initrd.img ip=dhcp
+boot || goto custom_exit
+
+:option_six
+kernel http://pxeboot:8080/rocky9/9.3/images/pxeboot/vmlinuz
+initrd http://pxeboot:8080/rocky9/9.3/images/pxeboot/initrd.img
+imgargs vmlinuz initrd=initrd.img ip=dhcp
+boot || goto custom_exit
+
+:option_seven
 kernel http://pxeboot:8080/centos7/7_6_adsk/images/pxeboot/vmlinuz
 initrd http://pxeboot:8080/centos7/7_6_adsk/images/pxeboot/initrd.img
 imgargs vmlinuz initrd=initrd.img http://pxeboot/root/netboot.xyz/assets/kickstarter/ks-centos76-adsk.cfg ip=dhcp
 boot || goto custom_exit
+
+
 :custom_exit
 exit
