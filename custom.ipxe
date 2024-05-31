@@ -25,8 +25,8 @@ imgargs vmlinuz initrd=initrd.img inst.ks=http://pxeboot:8080/kickstarter/ks-cen
 boot || goto custom_exit
 
 :option_two
-kernel https://dl.rockylinux.org/vault/rocky/8.7/BaseOS/x86_64/os/images/pxeboot/vmlinuz
-initrd https://dl.rockylinux.org/vault/rocky/8.7/BaseOS/x86_64/os/images/pxeboot/initrd.img
+kernel https://boot.netboot.xyz/memdisk iso raw
+initrd https://dl.rockylinux.org/vault/rocky/8.7/isos/x86_64/Rocky-8.7-x86_64-dvd1.iso
 imgargs vmlinuz initrd=initrd.img ip=dhcp
 boot || goto custom_exit
 
