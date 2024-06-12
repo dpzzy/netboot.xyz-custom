@@ -11,7 +11,7 @@ item option_one ${space} Centos 7.4
 item option_two ${space} Rocky 8.7
 item option_three ${space} Rocky 9.3
 item option_four ${space} Centos 7.4-nvme
-item option_five ${space} Rocky 8.7
+item option_five ${space} Rocky 8.7-nvme
 item option_six ${space} Rocky 9.3-nvme
 item --gap -- -------- Flame Images --------
 item option_seven ${space} Centos 7.6
