@@ -21,7 +21,7 @@ goto ${custom_choice}
 :option_one
 kernel http://pxeboot:8080/centos7/7_4/images/pxeboot/vmlinuz
 initrd http://pxeboot:8080/centos7/7_4/images/pxeboot/initrd.img
-imgargs vmlinuz initrd=initrd.img inst.ks=http://pxeboot:8080/kickstarter/ks-centos74-ws.cfg ip=dhcp
+imgargs vmlinuz initrd=initrd.img inst.nompath inst.ks=http://pxeboot:8080/kickstarter/ks-centos74-ws.cfg ip=dhcp
 boot || goto custom_exit
 
 :option_two
