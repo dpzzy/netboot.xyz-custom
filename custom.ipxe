@@ -31,25 +31,25 @@ imgargs vmlinuz initrd=initrd.img inst.nompath ip=dhcp
 #inst.ks=http://pxeboot:8080/kickstarter/ks-rocky8.7.cfg
 boot || goto custom_exit
 
-#:option_three
+:option_three
 kernel http://pxeboot:8080/rocky9/9.3/images/pxeboot/vmlinuz
 initrd http://pxeboot:8080/rocky9/9.3/images/pxeboot/initrd.img
 imgargs vmlinuz initrd=initrd.img ip=dhcp
 boot || goto custom_exit
 
-#:option_four
+:option_four
 kernel http://pxeboot:8080/rocky9/9.3/images/pxeboot/vmlinuz
 initrd http://pxeboot:8080/rocky9/9.3/images/pxeboot/initrd.img
 imgargs vmlinuz initrd=initrd.img ip=dhcp
 boot || goto custom_exit
 
-#:option_five
+:option_five
 kernel http://pxeboot:8080/rocky9/9.3/images/pxeboot/vmlinuz
 initrd http://pxeboot:8080/rocky9/9.3/images/pxeboot/initrd.img
 imgargs vmlinuz initrd=initrd.img ip=dhcp
 boot || goto custom_exit
 
-#:option_six
+:option_six
 kernel http://pxeboot:8080/rocky9/9.3/images/pxeboot/vmlinuz
 initrd http://pxeboot:8080/rocky9/9.3/images/pxeboot/initrd.img
 imgargs vmlinuz initrd=initrd.img ip=dhcp
