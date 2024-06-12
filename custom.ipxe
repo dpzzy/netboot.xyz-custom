@@ -25,10 +25,10 @@ imgargs vmlinuz initrd=initrd.img inst.nompath inst.ks=http://pxeboot:8080/kicks
 boot || goto custom_exit
 
 :option_two
-kernel https://dl.rockylinux.org/vault/rocky/8.7/BaseOS/x86_64/os/images/pxeboot/vmlinuz
-initrd https://dl.rockylinux.org/vault/rocky/8.7/BaseOS/x86_64/os/images/pxeboot/initrd.img
+kernel http://pxeboot:8080/rocky8/8.7/isolinux/vmlinuz
+initrd http://pxeboot:8080/rocky8/8.7/isolinux/initrd.img
 imgargs vmlinuz initrd=initrd.img inst.nompath 
-#inst.ks=http://pxeboot/root/netboot.xyz/assets/kickstarter/rocky8.7-ks.cfg
+inst.ks=http://pxeboot:8080/kickstarter/rocky8.7-ks.cfg
 boot || goto custom_exit
 
 :option_three
