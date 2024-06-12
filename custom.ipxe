@@ -11,7 +11,7 @@ item option_one ${space} Centos 7.4
 item option_two ${space} Rocky 8.7
 item option_three ${space} Rocky 9.3
 item option_four ${space} Centos 7.4-nvme
-item option_five ${space} Rocky 8.7-nvme
+item option_five ${space} Rocky 8.7
 item option_six ${space} Rocky 9.3-nvme
 item --gap -- -------- Flame Images --------
 item option_seven ${space} Centos 7.6
@@ -25,8 +25,8 @@ imgargs vmlinuz initrd=initrd.img inst.ks=http://pxeboot:8080/kickstarter/ks-cen
 boot || goto custom_exit
 
 :option_two
-kernel https://dl.rockylinux.org/vault/rocky/8.7/BaseOS/x86_64/os/images/pxeboot/vmlinuz
-initrd https://dl.rockylinux.org/vault/rocky/8.7/BaseOS/x86_64/os/images/pxeboot/initrd.img
+kernel http://pxeboot/root/netboot.xyz/assets/rocky8/8.7/images/pxeboot/vmlinuz
+initrd http://pxeboot/root/netboot.xyz/assets/rocky8/8.7/images/pxeboot/initrd.img
 imgargs vmlinuz initrd=initrd.img inst.nompath ip=dhcp
 #inst.ks=http://pxeboot:8080/kickstarter/ks-rocky8.7.cfg
 boot || goto custom_exit
