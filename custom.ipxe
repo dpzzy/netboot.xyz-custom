@@ -28,7 +28,7 @@ boot || goto custom_exit
 kernel https://dl.rockylinux.org/vault/rocky/8.7/BaseOS/x86_64/os/images/pxeboot/vmlinuz
 initrd https://dl.rockylinux.org/vault/rocky/8.7/BaseOS/x86_64/os/images/pxeboot/initrd.img
 imgargs vmlinuz initrd=initrd.img inst.nompath 
-#inst.ks=http://pxeboot:8080/kickstarter/ks-rocky8.7.cfg
+#inst.ks=http://pxeboot/root/netboot.xyz/assets/kickstarter/rocky8.7-ks.cfg
 boot || goto custom_exit
 
 :option_three
