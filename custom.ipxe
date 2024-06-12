@@ -25,7 +25,7 @@ imgargs vmlinuz initrd=initrd.img inst.ks=http://pxeboot:8080/kickstarter/ks-cen
 boot || goto custom_exit
 
 :option_two
-kernel hhttp://pxeboot:8080/rocky8/8.7/images/pxeboot/vmlinuz
+kernel http://pxeboot:8080/rocky8/8.7/images/pxeboot/vmlinuz
 initrd http://pxeboot:8080/rocky8/8.7/images/pxeboot/initrd.img
 imgargs vmlinuz initrd=initrd.img 
 inst.ks=http://pxeboot:8080/kickstarter/ks-rocky8.7.cfg
