@@ -27,7 +27,7 @@ boot || goto custom_exit
 :option_two
 kernel http://pxeboot:8080/rocky8/8.7/isolinux/vmlinuz
 initrd http://pxeboot:8080/rocky8/8.7/isolinux/initrd.img
-imgargs vmlinuz initrd=http://pxeboot:8080/rocky8/8.7/initrd.img
+imgargs vmlinuz initrd=http://pxeboot:8080/rocky8/8.7/isolinux/initrd.img
 boot || goto custom_exit
 
 :option_three
